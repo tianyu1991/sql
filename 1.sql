@@ -33,7 +33,8 @@ From dbo.Mybook
 WHERE Writer='Shakespeare'
 With Check OPtion
 GO
-
+CREATE UNIQUE CLUSTERED INDEX boView_index ON dbo.BookView(BookID);
+GO
 WITH XMLNAMESPACES('TK461-CustomersOrders' AS Bo)
 SELECT [Bo:MyBook].BookId AS [bo:bookid],
 [Bo:MyBook].BookName AS [co:bookname],
